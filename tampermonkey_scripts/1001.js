@@ -5,7 +5,7 @@
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee
 // @match        https://www.kuaishou.com/short-video/*
-// @icon         https://www.google.com/s2/favicons?domain=tampermonkey.net
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
 

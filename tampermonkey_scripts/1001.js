@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pc_ks_ctl
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee
 // @match        https://www.kuaishou.com/short-video/*

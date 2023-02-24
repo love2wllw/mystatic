@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         pc_ks_ctl
 // @namespace    http://tampermonkey.net/
+// @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/1001.js
 // @version      0.2
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee

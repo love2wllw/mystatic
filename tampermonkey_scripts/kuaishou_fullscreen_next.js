@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         kuaishou_fullscreen_next
 // @namespace    http://tampermonkey.net/
-// @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/1001.js
-// @version      0.2
+// @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/kuaishou_fullscreen_next.js
+// @version      0.1
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee
 // @match        https://www.kuaishou.com/short-video/*

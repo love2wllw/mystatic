@@ -12,11 +12,12 @@
 
 (function() {
     'use strict';
+    
     function handler(ev){
         const e = ev || window.event;
         const down = e.wheelDelta ? e.wheelDelta < 0 : e.detail > 0;
-        console.log("down", down);
-        console.log("__wheel_lock__", window.__wheel_lock__);
+        //console.log("down", down);
+        //console.log("__wheel_lock__", window.__wheel_lock__);
         if(!window.__wheel_lock__){
             window.__wheel_lock__ = true;
             setTimeout(()=>{ window.__wheel_lock__ = false; }, 2000);
@@ -25,10 +26,17 @@
         if (e.preventDefault) { e.preventDefault(); }
         return false;
     }
-    window.__wheel_lock__ = false;
-    window.onload = function(){
+    
+    function loaded(){
+        window.__wheel_lock__ = false;
         const type = "onmousewheel" in window.document ? "mousewheel" : "DOMMouseScroll";
         window.addEventListener(type, handler, false);
-        console.log("addEventListener");
+        //console.log("addEventListener");
     }
+    
+    if (["interactive", "complete"].includes(document.readyState))
+        loaded();
+    else
+        window.addEventListener("DOMContentLoaded", loaded);
+    
 })();

@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         pc_ks_ctl
+// @name         kuaishou_fullscreen_next
 // @namespace    http://tampermonkey.net/
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/1001.js
 // @version      0.2

@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         tanhuazu_viewlist
+// @namespace    http://tampermonkey.net/
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/tanhuazu_viewlist.js
 // @version      0.2
 // @description  try to take over the world!

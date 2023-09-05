@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         tanhuazu_viewlist
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/tanhuazu_viewlist.js
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       DidiLee
 // @match        https://www.tanhuazu.com/whats-new/*
@@ -66,9 +66,10 @@
         viewTransform();
     };
 
-    if (["interactive", "complete"].includes(document.readyState))
+    if (["interactive", "complete"].includes(document.readyState)){
         windowLoaded();
-    else
+    } else {
         window.addEventListener("DOMContentLoaded", windowLoaded);
-
+    }
+    
 })();

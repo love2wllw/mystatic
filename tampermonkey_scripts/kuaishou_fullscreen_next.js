@@ -6,7 +6,7 @@
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee
 // @match        https://www.kuaishou.com/short-video/*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=kuaishou.com
 // @grant        none
 // ==/UserScript==
 

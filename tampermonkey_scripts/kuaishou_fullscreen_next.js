@@ -2,7 +2,7 @@
 // @name         kuaishou_fullscreen_next
 // @namespace    http://tampermonkey.net/
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/kuaishou_fullscreen_next.js
-// @version      0.1
+// @version      0.2
 // @description  快手PC网页版非首页全屏后鼠标控制翻页
 // @author       DidiLee
 // @match        https://www.kuaishou.com/short-video/*
@@ -34,9 +34,9 @@
         //console.log("addEventListener");
     }
     
-    if (["interactive", "complete"].includes(document.readyState))
+    if (["interactive", "complete"].includes(document.readyState)) {
         loaded();
-    else
+    } else {
         window.addEventListener("DOMContentLoaded", loaded);
-    
+    }
 })();

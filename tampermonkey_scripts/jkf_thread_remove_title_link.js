@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         jkforum_thread_remove_title_link
+// @name         jkf_thread_remove_title_link
 // @namespace    http://tampermonkey.net/
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/jkf_thread_remove_title_link.js
 // @version      0.1

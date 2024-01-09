@@ -39,7 +39,7 @@
     }
 
     const windowLoaded = async () => {
-        const entry_title = document.querySelector("h1 .entry-title");
+        const entry_title = document.querySelector("h1.entry-title");
         const btn_start = document.createElement("a");
         btn_start.text = "聚合";
         btn_start.href = "javascript:;";

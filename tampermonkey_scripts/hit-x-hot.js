@@ -15,39 +15,54 @@
 (function () {
     'use strict';
 
-    async function get_src_list(url, list) {
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    async function get_src_list(url) {
         const response = await fetch(url);
         const html = await response.text();
         const re = /<a href=\"\/img\.html\?url=(.+?)\">/ig;
         let mc;
+        const arr = [];
         while ((mc = re.exec(html)) !== null) {
-            list.push(mc[1]);
+            arr.push(mc[1]);
         }
+        return arr;
     }
     async function loop_page(url) {
         const list = [];
-        get_src_list(url, list);
-        console.log(list);
-        //const response = await fetch(url);
-        //const html = await response.text();
-    }
+        let page = 0;
+        while (true) {
+            try {
+                page++;
+                const arr = await get_src_list(`${url}?page=${page}`);
+                if (arr.length == 0) break;
+                list = list.concat(arr);
+                await delay(500);
+            } catch (error) {
+                console.error(error);
+                break;
+            }
+        }
 
-    async function demo() {
-        const html = await get_src_list("https://www.hitxhot.org/gallerys/OXBEb3FYSzRhODlSV0dzN2R1QTRzZz09.html");
-        //const win = window.open(null, "_blank");
-        //win.document.write(s);
+        return list;
     }
-
     const windowLoaded = async () => {
         const entry_title = document.querySelector("h1.entry-title");
+        const main_url = entry_title.querySelector("a").href;
         const btn_start = document.createElement("a");
-        btn_start.text = "聚合";
+        btn_start.style.marginLeft = "20px";
+        btn_start.text = "(聚合)";
         btn_start.href = "javascript:;";
-        btn_start.onclick = function () {
-            loop_page("https://www.hitxhot.org/gallerys/OXBEb3FYSzRhODlSV0dzN2R1QTRzZz09.html")
+        btn_start.setAttribute("state", "stop");
+        btn_start.onclick = async function () {
+            if (btn_start.getAttribute("state") == "stop") {
+                btn_start.setAttribute("state", "start");
+                const list = await loop_page(main_url);
+                btn_start.setAttribute("state", "stop");
+                console.log(list);
+            }
         }
         entry_title.append(btn_start);
-        //console.log(s);
     };
     if (["interactive", "complete"].includes(document.readyState)) {
         windowLoaded();

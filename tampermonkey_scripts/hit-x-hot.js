@@ -4,7 +4,7 @@
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
 // @downloadURL  https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
 // @updateURL    https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
-// @version      0.2
+// @version      0.2.1
 // @description  hitxhot tool
 // @author       DidiLee
 // @match        https://www.hitxhot.org/gallerys/*

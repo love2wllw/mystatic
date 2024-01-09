@@ -92,14 +92,14 @@
                     list.forEach(val => {
                         const img = winDoc.createElement("img");
                         img.setAttribute("src", val);
-                        div.append(img);
+                        div.appendChild(img);
                     });
-                    winDoc.body.append(div);
+                    winDoc.body.appendChild(div);
 
                 }
             }
         }
-        entry_title.append(btn_start);
+        entry_title.appendChild(btn_start);
     };
     if (["interactive", "complete"].includes(document.readyState)) {
         windowLoaded();

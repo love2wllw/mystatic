@@ -4,7 +4,7 @@
 // @homepage     https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
 // @downloadURL  https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
 // @updateURL    https://raw.githubusercontent.com/love2wllw/mystatic/master/tampermonkey_scripts/hit-x-hot.js
-// @version      0.2.4
+// @version      0.2.5
 // @description  hitxhot tool
 // @author       DidiLee
 // @match        https://www.hitxhot.org/gallerys/*
@@ -34,7 +34,7 @@
         while (true) {
             try {
                 page++;
-                const url = `${url}?page=${page}`;
+                const url = `${main_url}?page=${page}`;
                 const arr = await get_src_list(url);
                 console.log(url, arr.length);
                 if (arr.length == 0) break;

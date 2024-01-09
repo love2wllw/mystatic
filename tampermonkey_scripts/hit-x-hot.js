@@ -29,7 +29,7 @@
         return arr;
     }
     async function loop_page(url) {
-        const list = [];
+        let list = [];
         let page = 0;
         while (true) {
             try {
